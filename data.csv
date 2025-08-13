@@ -1,59 +1,35 @@
-name,area
-ASAP,City Centre
-Atrium,City Centre
-Bold Street,City Centre
-Caravan,City Centre
-Companio Bakery,City Centre
-Ditto,City Centre
-Factory Coffee,City Centre
-Ezra and Gil,City Centre
-Federal,City Centre
-Feel Good Club,City Centre
-Fig & Sparrow,City Centre
-Foley's,City Centre
-Fort,City Centre
-Foundation,City Centre
-Hampton & Vouis,City Centre
-Haunt,City Centre
-Hinterland,City Centre
-Idle Hands,City Centre
-Just Between Friends,City Centre
-La Collina,City Centre
-Loaf,City Centre
-PKB,City Centre
-Pollen Bakery,City Centre
-Pulp Coffee,City Centre
-SeeSaw,City Centre
-Siop Shop,City Centre
-Spice and Grind,City Centre
-The Flat Baker,City Centre
-Bohee Coffee,South Manchester
-Cap Coffee,South Manchester
-Hikari Coffee,South Manchester
-Kiosk,South Manchester
-Smoak,South Manchester
-Something More Productive,South Manchester
-Coffee Fix,Stockport
-B'spoke Coffee,Stockport
-Kobean Coffee,Stockport
-Stomping Ground,Stockport
-2 Brothers,Trafford
-Á Bloc,Trafford
-Bakehouse 32,Trafford
-Blanch Flower,Trafford
-Blossom Coffee Roasters,Trafford
-Caffeine & Co,Trafford
-Grapefruit Coffee,Trafford
-Kickback Coffee,Trafford
-Oscillate,Trafford
-Sale moon,Trafford
-Swig coffee,Trafford
-All The Shapes,Bury
-Heart & Graft Roastery,Oldham
-Cult & Coffee,Salford
-Grindsmith,Salford
-Inner West,Salford
-Locale Coffee,Salford
-Old Fire Station,Salford
-Procaffeinated,Salford
-Swansong Coffee Roasters,Salford
+name,address,url,lat,lon
+ASAP,"6 Tariff Street, Manchester M1 2FF",https://www.instagram.com/asapcoffeeshop/,"53.48110555452632,",-2.2324543733981600
+ASAP,"Unit 1, 103 Oxford Road, Manchester M1 7ED",https://www.instagram.com/asapcoffeeshop/,"53.47187902981183,",-2.238390263730320
+Atrium,"1 St Peter's Square, Manchester M2 3DE",http://www.atrium-coffee.co.uk/,"53.47754053610366,",-2.2433262617416000
+Bold Street,"53 Cross Street, Manchester M2 4JN",https://www.boldstreetcoffee.co.uk/cross-street-manchester/,"53.480469973131065,",-2.2448781877872800
+Bold Street,"140 Oxford Road, Manchester M13 9GP",https://boldstreetcoffee.co.uk/pages/university-green-manchester,"53.46757341084062,",-2.2355967889518500
+Bold Street,"2 Hardman Street, Manchester M3 3HF",https://boldstreetcoffee.co.uk/pages/spinningfields-manchester,"53.479489116651216,",-2.2501433239456200
+Companio Bakery,"Unit 1, 60 Spear Street, Manchester M1 1AW",https://companiobakery.co.uk/,"53.483822535776966,",-2.2328043384277000
+Ditto Coffee Union,"Union, Albert Square, Manchester M2 6LW",http://www.dittocoffee.co.uk/,"53.4797301028479,",-2.245846379753460
+Ditto Coffee Union,"61 Oxford Street, Manchester M1 6EQ",http://www.dittocoffee.co.uk/,"53.475956258609195,",-2.242128342328610
+Ezra and Gil,"49 Peter Street, Manchester M2 3NG",https://www.ezraandgil.com/location/peter-street,"53.478015784800746,",-2.246264219307350
+Ezra and Gil,"20 Hilton St, Manchester M1 1FR",https://www.ezraandgil.com/location/northern-quarter,"53.48203440603377,",-2.2328834425479600
+Factory Coffee,"38 King Street W, Manchester M3 2WZ",https://www.factorycoffeemcr.com/,"53.48149357297594,",-2.249651577178490
+Federal,"194 Deansgate, Manchester M3 3ND",https://federalcafe.co.uk/pages/deansgate,"53.47870696244997,",-2.24952042105721
+Federal,"9 Nicholas Croft Street, NQ, Manchester, M4 1EY",https://federalcafe.co.uk/pages/northern-quarter,"53.48428249706542,",-2.238492603046930
+Federal,"R3 No2 Circle Square, Oxford Road, Manchester, M1 7FS",https://federalcafe.co.uk/pages/oxford-road,"53.47267677574729,",-2.2391275207355300
+Feel Good Club,"26-28 Hilton Street, Manchester M1 2EH",http://www.feelgoodclub.co/,"53.48172030486738,",-2.2322933004919800
+fig + sparrow.,"20 Oldham Street, Manchester M1 1JA",https://www.instagram.com/figsparrow/,"53.48256426696331,",-2.2355192617413000
+Fort,"255 Deansgate, Manchester M3 4EN",https://www.instagram.com/fort_coffee_,"53.47701986632445,",-2.250142120025400
+Hampton & Vouis,"31 Princess Street, Manchester M2 4EW",https://www.hamptonandvouis.co.uk,"53.47974839132749,",-2.243905326159490
+House of Books & Friends,"Ground Floor, 81 King Street, Manchester M2 4AH",http://www.houseofbooksandfriends.com/,"53.480964168372054,",-2.2423572047938100
+Idle Hands,"35 Dale Street, Manchester M1 2HF",http://www.idlehandscoffee.com/,"53.481175918569,",-2.2329801985467900
+Just Between Friends,"56 Tib Street, Manchester M4 1LG",http://www.justbetweenfriendscoffee.com/,"53.48345933590387,",-2.2350841482493300
+La Collina,"The Tootal Building, Oxford Road, Manchester M1 6EU",https://www.instagram.com/lacollinamcr,"53.475341815463366,",-2.242019171031690
+Mancoco Coffee Bar,"85 Hewitt Street, Manchester M15 4GB",http://mancoco.co.uk/,"53.473955886528756,",-2.2489054535736700
+Northern Pour,"Sevendale House, Lever Street, Manchester M1 1JA",https://northernpour.co.uk,"53.482274363436304,",-2.23442291233974
+Pot Kettle Black,"Barton Arcade, Manchester M3 2BW",https://potkettleblackltd.co.uk/,"53.48274371564729,",-2.246285006769220
+Pot Kettle Black,"Angel Gardens, 1 Rochdale Rd, Manchester M4 4GE",https://potkettleblackltd.co.uk/,"53.486515197162404,",-2.236052436170750
+Pollen Bakery,"Cotton Field Wharf, 8 New Union St, Manchester M4 6FQ",http://pollenbakery.com/,"53.48349741176415,",-2.224253000043100
+Pollen Bakery,"42 Aytoun Street, Manchester M1 3GL",http://pollenbakery.com/,"53.477485687071706,",-2.2341811029441600
+Pulp Coffee,"Hanover Street, Manchester M4 4AH",https://www.instagram.com/pulpcoffee,"53.486594492617385,",-2.2400121740095400
+Siop Shop,"53 Tib Street, Manchester M4 1LS",http://siopshop.co/,"53.4843482942626,",-2.234055318380510
+Sipp Coffee,"57a Great Ancoats Street, Ancoats, Manchester M4 5AB",https://www.instagram.com/sippcoffeemcr,"53.483696900682034,",-2.2303532570456600
+Spice and Grind,"Irwell Street, Salford M3 5EL",https://www.instagram.com/spice_and_grind,"53.48118807414338,",-2.2569748618394800
+The Flat Baker,"23 Radium Street, Ancoats, Manchester M4 6AY",http://www.theflatbaker.co.uk/,"53.485136567337406,",-2.225799184022150
