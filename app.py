@@ -12,7 +12,7 @@ st.set_page_config(page_title="MCR coffee shops", page_icon=":coffee:", layout="
 st.title("MCR coffee shops ☕")
 st.markdown('''Explore some of the best independent coffee shops in Manchester.''')
 
-map = folium.Map(location=[53.478213561808005,-2.244687230244309], zoom_start=15, tiles='CartoDB positron')
+map = folium.Map(location=[53.478213561808005,-2.244687230244309], zoom_start=15)
 for index, row in df.iterrows():
     latitude = row['lat']
     longitude = row['lon']
