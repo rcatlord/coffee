@@ -1,4 +1,4 @@
-# Coffe shops in Manchester
+# Coffee shops in Manchester
 
 import streamlit as st
 import pandas as pd
