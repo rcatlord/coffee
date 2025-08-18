@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c44510619cc1dd5ccf92812597162f4c {
+                #map_4a592fe70bf0ffd57da8fed837d7efa1 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,60 +50,43 @@
             </script>
 
         
-    
-                    <style>
-                        .foliumtooltip {
-                            
-                        }
-                       .foliumtooltip table{
-                            margin: auto;
-                        }
-                        .foliumtooltip tr{
-                            text-align: left;
-                        }
-                        .foliumtooltip th{
-                            padding: 2px; padding-right: 8px;
-                        }
-                    </style>
-            
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_c44510619cc1dd5ccf92812597162f4c" ></div>
+            <div class="folium-map" id="map_4a592fe70bf0ffd57da8fed837d7efa1" ></div>
         
 </body>
 <script>
     
     
-            var map_c44510619cc1dd5ccf92812597162f4c = L.map(
-                "map_c44510619cc1dd5ccf92812597162f4c",
+            var map_4a592fe70bf0ffd57da8fed837d7efa1 = L.map(
+                "map_4a592fe70bf0ffd57da8fed837d7efa1",
                 {
-                    center: [53.47708395, -2.240613931],
+                    center: [53.478213561808005, -2.244687230244309],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 10,
+  "zoom": 15,
   "zoomControl": true,
   "preferCanvas": false,
 }
 
                 }
             );
-            L.control.scale().addTo(map_c44510619cc1dd5ccf92812597162f4c);
 
             
 
         
     
-            var tile_layer_2bafb2af690a798ab0dc37580fc5891b = L.tileLayer(
-                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+            var tile_layer_6bb709816222a7cdd44efd26a1ac4a3b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
   "maxZoom": 20,
   "maxNativeZoom": 20,
   "noWrap": false,
   "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abc",
+  "subdomains": "abcd",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -112,126 +95,1299 @@
             );
         
     
-            tile_layer_2bafb2af690a798ab0dc37580fc5891b.addTo(map_c44510619cc1dd5ccf92812597162f4c);
+            tile_layer_6bb709816222a7cdd44efd26a1ac4a3b.addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
         
     
-            map_c44510619cc1dd5ccf92812597162f4c.fitBounds(
-                [[53.46757341, -2.256974862], [53.48659449, -2.224253]],
-                {}
+            var marker_cdaddb867e151307572a001215709d09 = L.marker(
+                [53.48110555, -2.232454373],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_98258bfc64ebddc865179ac181162c10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
             );
         
     
-        function geo_json_ef6347e34fb7886438107e73659b4f2c_styler(feature) {
-            switch(feature.id) {
-                default:
-                    return {"color": "black", "fillColor": "brown", "fillOpacity": 0.1, "opacity": 0.5, "weight": 2};
-            }
-        }
-        function geo_json_ef6347e34fb7886438107e73659b4f2c_highlighter(feature) {
-            switch(feature.id) {
-                default:
-                    return {"fillOpacity": 0.75};
-            }
-        }
-        function geo_json_ef6347e34fb7886438107e73659b4f2c_pointToLayer(feature, latlng) {
-            var opts = {
-  "stroke": true,
-  "color": "#3388ff",
-  "weight": 3,
-  "opacity": 1.0,
-  "lineCap": "round",
-  "lineJoin": "round",
-  "dashArray": null,
-  "dashOffset": null,
-  "fill": true,
-  "fillColor": "#3388ff",
-  "fillOpacity": 0.2,
-  "fillRule": "evenodd",
-  "bubblingMouseEvents": true,
-  "radius": 5,
-};
-            
-            let style = geo_json_ef6347e34fb7886438107e73659b4f2c_styler(feature)
-            Object.assign(opts, style)
-            
-            return new L.CircleMarker(latlng, opts)
-        }
-
-        function geo_json_ef6347e34fb7886438107e73659b4f2c_onEachFeature(feature, layer) {
-
-            layer.on({
-                mouseout: function(e) {
-                    if(typeof e.target.setStyle === "function"){
-                            geo_json_ef6347e34fb7886438107e73659b4f2c.resetStyle(e.target);
-                    }
-                },
-                mouseover: function(e) {
-                    if(typeof e.target.setStyle === "function"){
-                        const highlightStyle = geo_json_ef6347e34fb7886438107e73659b4f2c_highlighter(e.target.feature)
-                        e.target.setStyle(highlightStyle);
-                    }
-                },
-            });
-        };
-        var geo_json_ef6347e34fb7886438107e73659b4f2c = L.geoJson(null, {
-                onEachFeature: geo_json_ef6347e34fb7886438107e73659b4f2c_onEachFeature,
-            
-                style: geo_json_ef6347e34fb7886438107e73659b4f2c_styler,
-                pointToLayer: geo_json_ef6347e34fb7886438107e73659b4f2c_pointToLayer,
-            ...{
-}
-        });
-
-        function geo_json_ef6347e34fb7886438107e73659b4f2c_add (data) {
-            geo_json_ef6347e34fb7886438107e73659b4f2c
-                .addData(data);
-        }
-            geo_json_ef6347e34fb7886438107e73659b4f2c_add({"bbox": [-2.256974862, 53.46757341, -2.224253, 53.48659449], "features": [{"bbox": [-2.232454373, 53.48110555, -2.232454373, 53.48110555], "geometry": {"coordinates": [-2.232454373, 53.48110555], "type": "Point"}, "id": "0", "properties": {"__folium_color": "brown", "address": "6 Tariff Street, Manchester M1 2FF", "name": "ASAP", "url": "https://www.instagram.com/asapcoffeeshop/"}, "type": "Feature"}, {"bbox": [-2.238390264, 53.47187903, -2.238390264, 53.47187903], "geometry": {"coordinates": [-2.238390264, 53.47187903], "type": "Point"}, "id": "1", "properties": {"__folium_color": "brown", "address": "Unit 1, 103 Oxford Road, Manchester M1 7ED", "name": "ASAP", "url": "https://www.instagram.com/asapcoffeeshop/"}, "type": "Feature"}, {"bbox": [-2.243326262, 53.47754054, -2.243326262, 53.47754054], "geometry": {"coordinates": [-2.243326262, 53.47754054], "type": "Point"}, "id": "2", "properties": {"__folium_color": "brown", "address": "1 St Peter\u0027s Square, Manchester M2 3DE", "name": "Atrium", "url": "http://www.atrium-coffee.co.uk/"}, "type": "Feature"}, {"bbox": [-2.244878188, 53.48046997, -2.244878188, 53.48046997], "geometry": {"coordinates": [-2.244878188, 53.48046997], "type": "Point"}, "id": "3", "properties": {"__folium_color": "brown", "address": "53 Cross Street, Manchester M2 4JN", "name": "Bold Street", "url": "https://www.boldstreetcoffee.co.uk/cross-street-manchester/"}, "type": "Feature"}, {"bbox": [-2.235596789, 53.46757341, -2.235596789, 53.46757341], "geometry": {"coordinates": [-2.235596789, 53.46757341], "type": "Point"}, "id": "4", "properties": {"__folium_color": "brown", "address": "140 Oxford Road, Manchester M13 9GP", "name": "Bold Street", "url": "https://boldstreetcoffee.co.uk/pages/university-green-manchester"}, "type": "Feature"}, {"bbox": [-2.250143324, 53.47948912, -2.250143324, 53.47948912], "geometry": {"coordinates": [-2.250143324, 53.47948912], "type": "Point"}, "id": "5", "properties": {"__folium_color": "brown", "address": "2 Hardman Street, Manchester M3 3HF", "name": "Bold Street", "url": "https://boldstreetcoffee.co.uk/pages/spinningfields-manchester"}, "type": "Feature"}, {"bbox": [-2.232804338, 53.48382254, -2.232804338, 53.48382254], "geometry": {"coordinates": [-2.232804338, 53.48382254], "type": "Point"}, "id": "6", "properties": {"__folium_color": "brown", "address": "Unit 1, 60 Spear Street, Manchester M1 1AW", "name": "Companio Bakery", "url": "https://companiobakery.co.uk/"}, "type": "Feature"}, {"bbox": [-2.24584638, 53.4797301, -2.24584638, 53.4797301], "geometry": {"coordinates": [-2.24584638, 53.4797301], "type": "Point"}, "id": "7", "properties": {"__folium_color": "brown", "address": "Union, Albert Square, Manchester M2 6LW", "name": "Ditto Coffee Union", "url": "http://www.dittocoffee.co.uk/"}, "type": "Feature"}, {"bbox": [-2.242128342, 53.47595626, -2.242128342, 53.47595626], "geometry": {"coordinates": [-2.242128342, 53.47595626], "type": "Point"}, "id": "8", "properties": {"__folium_color": "brown", "address": "61 Oxford Street, Manchester M1 6EQ", "name": "Ditto Coffee Union", "url": "http://www.dittocoffee.co.uk/"}, "type": "Feature"}, {"bbox": [-2.246264219, 53.47801578, -2.246264219, 53.47801578], "geometry": {"coordinates": [-2.246264219, 53.47801578], "type": "Point"}, "id": "9", "properties": {"__folium_color": "brown", "address": "49 Peter Street, Manchester M2 3NG", "name": "Ezra and Gil", "url": "https://www.ezraandgil.com/location/peter-street"}, "type": "Feature"}, {"bbox": [-2.232883443, 53.48203441, -2.232883443, 53.48203441], "geometry": {"coordinates": [-2.232883443, 53.48203441], "type": "Point"}, "id": "10", "properties": {"__folium_color": "brown", "address": "20 Hilton St, Manchester M1 1FR", "name": "Ezra and Gil", "url": "https://www.ezraandgil.com/location/northern-quarter"}, "type": "Feature"}, {"bbox": [-2.249651577, 53.48149357, -2.249651577, 53.48149357], "geometry": {"coordinates": [-2.249651577, 53.48149357], "type": "Point"}, "id": "11", "properties": {"__folium_color": "brown", "address": "38 King Street W, Manchester M3 2WZ", "name": "Factory Coffee", "url": "https://www.factorycoffeemcr.com/"}, "type": "Feature"}, {"bbox": [-2.249520421, 53.47870696, -2.249520421, 53.47870696], "geometry": {"coordinates": [-2.249520421, 53.47870696], "type": "Point"}, "id": "12", "properties": {"__folium_color": "brown", "address": "194 Deansgate, Manchester M3 3ND", "name": "Federal", "url": "https://federalcafe.co.uk/pages/deansgate"}, "type": "Feature"}, {"bbox": [-2.238492603, 53.4842825, -2.238492603, 53.4842825], "geometry": {"coordinates": [-2.238492603, 53.4842825], "type": "Point"}, "id": "13", "properties": {"__folium_color": "brown", "address": "9 Nicholas Croft Street, NQ, Manchester, M4 1EY", "name": "Federal", "url": "https://federalcafe.co.uk/pages/northern-quarter"}, "type": "Feature"}, {"bbox": [-2.239127521, 53.47267678, -2.239127521, 53.47267678], "geometry": {"coordinates": [-2.239127521, 53.47267678], "type": "Point"}, "id": "14", "properties": {"__folium_color": "brown", "address": "R3 No2 Circle Square, Oxford Road, Manchester, M1 7FS", "name": "Federal", "url": "https://federalcafe.co.uk/pages/oxford-road"}, "type": "Feature"}, {"bbox": [-2.2322933, 53.4817203, -2.2322933, 53.4817203], "geometry": {"coordinates": [-2.2322933, 53.4817203], "type": "Point"}, "id": "15", "properties": {"__folium_color": "brown", "address": "26-28 Hilton Street, Manchester M1 2EH", "name": "Feel Good Club", "url": "http://www.feelgoodclub.co/"}, "type": "Feature"}, {"bbox": [-2.235519262, 53.48256427, -2.235519262, 53.48256427], "geometry": {"coordinates": [-2.235519262, 53.48256427], "type": "Point"}, "id": "16", "properties": {"__folium_color": "brown", "address": "20 Oldham Street, Manchester M1 1JA", "name": "fig + sparrow.", "url": "https://www.instagram.com/figsparrow/"}, "type": "Feature"}, {"bbox": [-2.25014212, 53.47701987, -2.25014212, 53.47701987], "geometry": {"coordinates": [-2.25014212, 53.47701987], "type": "Point"}, "id": "17", "properties": {"__folium_color": "brown", "address": "255 Deansgate, Manchester M3 4EN", "name": "Fort", "url": "https://www.instagram.com/fort_coffee_"}, "type": "Feature"}, {"bbox": [-2.243905326, 53.47974839, -2.243905326, 53.47974839], "geometry": {"coordinates": [-2.243905326, 53.47974839], "type": "Point"}, "id": "18", "properties": {"__folium_color": "brown", "address": "31 Princess Street, Manchester M2 4EW", "name": "Hampton \u0026 Vouis", "url": "https://www.hamptonandvouis.co.uk"}, "type": "Feature"}, {"bbox": [-2.242357205, 53.48096417, -2.242357205, 53.48096417], "geometry": {"coordinates": [-2.242357205, 53.48096417], "type": "Point"}, "id": "19", "properties": {"__folium_color": "brown", "address": "Ground Floor, 81 King Street, Manchester M2 4AH", "name": "House of Books \u0026 Friends", "url": "http://www.houseofbooksandfriends.com/"}, "type": "Feature"}, {"bbox": [-2.232980199, 53.48117592, -2.232980199, 53.48117592], "geometry": {"coordinates": [-2.232980199, 53.48117592], "type": "Point"}, "id": "20", "properties": {"__folium_color": "brown", "address": "35 Dale Street, Manchester M1 2HF", "name": "Idle Hands", "url": "http://www.idlehandscoffee.com/"}, "type": "Feature"}, {"bbox": [-2.235084148, 53.48345934, -2.235084148, 53.48345934], "geometry": {"coordinates": [-2.235084148, 53.48345934], "type": "Point"}, "id": "21", "properties": {"__folium_color": "brown", "address": "56 Tib Street, Manchester M4 1LG", "name": "Just Between Friends", "url": "http://www.justbetweenfriendscoffee.com/"}, "type": "Feature"}, {"bbox": [-2.242019171, 53.47534182, -2.242019171, 53.47534182], "geometry": {"coordinates": [-2.242019171, 53.47534182], "type": "Point"}, "id": "22", "properties": {"__folium_color": "brown", "address": "The Tootal Building, Oxford Road, Manchester M1 6EU", "name": "La Collina", "url": "https://www.instagram.com/lacollinamcr"}, "type": "Feature"}, {"bbox": [-2.248905454, 53.47395589, -2.248905454, 53.47395589], "geometry": {"coordinates": [-2.248905454, 53.47395589], "type": "Point"}, "id": "23", "properties": {"__folium_color": "brown", "address": "85 Hewitt Street, Manchester M15 4GB", "name": "Mancoco Coffee Bar", "url": "http://mancoco.co.uk/"}, "type": "Feature"}, {"bbox": [-2.234422912, 53.48227436, -2.234422912, 53.48227436], "geometry": {"coordinates": [-2.234422912, 53.48227436], "type": "Point"}, "id": "24", "properties": {"__folium_color": "brown", "address": "Sevendale House, Lever Street, Manchester M1 1JA", "name": "Northern Pour", "url": "https://northernpour.co.uk"}, "type": "Feature"}, {"bbox": [-2.246285007, 53.48274372, -2.246285007, 53.48274372], "geometry": {"coordinates": [-2.246285007, 53.48274372], "type": "Point"}, "id": "25", "properties": {"__folium_color": "brown", "address": "Barton Arcade, Manchester M3 2BW", "name": "Pot Kettle Black", "url": "https://potkettleblackltd.co.uk/"}, "type": "Feature"}, {"bbox": [-2.236052436, 53.4865152, -2.236052436, 53.4865152], "geometry": {"coordinates": [-2.236052436, 53.4865152], "type": "Point"}, "id": "26", "properties": {"__folium_color": "brown", "address": "Angel Gardens, 1 Rochdale Rd, Manchester M4 4GE", "name": "Pot Kettle Black", "url": "https://potkettleblackltd.co.uk/"}, "type": "Feature"}, {"bbox": [-2.224253, 53.48349741, -2.224253, 53.48349741], "geometry": {"coordinates": [-2.224253, 53.48349741], "type": "Point"}, "id": "27", "properties": {"__folium_color": "brown", "address": "Cotton Field Wharf, 8 New Union St, Manchester M4 6FQ", "name": "Pollen Bakery", "url": "http://pollenbakery.com/"}, "type": "Feature"}, {"bbox": [-2.234181103, 53.47748569, -2.234181103, 53.47748569], "geometry": {"coordinates": [-2.234181103, 53.47748569], "type": "Point"}, "id": "28", "properties": {"__folium_color": "brown", "address": "42 Aytoun Street, Manchester M1 3GL", "name": "Pollen Bakery", "url": "http://pollenbakery.com/"}, "type": "Feature"}, {"bbox": [-2.240012174, 53.48659449, -2.240012174, 53.48659449], "geometry": {"coordinates": [-2.240012174, 53.48659449], "type": "Point"}, "id": "29", "properties": {"__folium_color": "brown", "address": "Hanover Street, Manchester M4 4AH", "name": "Pulp Coffee", "url": "https://www.instagram.com/pulpcoffee"}, "type": "Feature"}, {"bbox": [-2.234055318, 53.48434829, -2.234055318, 53.48434829], "geometry": {"coordinates": [-2.234055318, 53.48434829], "type": "Point"}, "id": "30", "properties": {"__folium_color": "brown", "address": "53 Tib Street, Manchester M4 1LS", "name": "Siop Shop", "url": "http://siopshop.co/"}, "type": "Feature"}, {"bbox": [-2.230353257, 53.4836969, -2.230353257, 53.4836969], "geometry": {"coordinates": [-2.230353257, 53.4836969], "type": "Point"}, "id": "31", "properties": {"__folium_color": "brown", "address": "57a Great Ancoats Street, Ancoats, Manchester M4 5AB", "name": "Sipp Coffee", "url": "https://www.instagram.com/sippcoffeemcr"}, "type": "Feature"}, {"bbox": [-2.256974862, 53.48118807, -2.256974862, 53.48118807], "geometry": {"coordinates": [-2.256974862, 53.48118807], "type": "Point"}, "id": "32", "properties": {"__folium_color": "brown", "address": "Irwell Street, Salford M3 5EL", "name": "Spice and Grind", "url": "https://www.instagram.com/spice_and_grind"}, "type": "Feature"}, {"bbox": [-2.225799184, 53.48513657, -2.225799184, 53.48513657], "geometry": {"coordinates": [-2.225799184, 53.48513657], "type": "Point"}, "id": "33", "properties": {"__folium_color": "brown", "address": "23 Radium Street, Ancoats, Manchester M4 6AY", "name": "The Flat Baker", "url": "http://www.theflatbaker.co.uk/"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-        
-    
-    geo_json_ef6347e34fb7886438107e73659b4f2c.bindTooltip(
-    function(layer){
-    let div = L.DomUtil.create('div');
-    
-    let handleObject = feature => {
-        if (feature === null) {
-            return '';
-        } else if (typeof(feature)=='object') {
-            return JSON.stringify(feature);
-        } else {
-            return feature;
-        }
-    }
-    let fields = ["name", "address", "url"];
-    let aliases = ["name", "address", "url"];
-    let table = '<table>' +
-        String(
-        fields.map(
-        (v,i)=>
-        `<tr>
-            <th>${aliases[i]}</th>
-            
-            <td>${handleObject(layer.feature.properties[v])}</td>
-        </tr>`).join(''))
-    +'</table>';
-    div.innerHTML=table;
-    
-    return div
-    }
-    ,{
-  "sticky": true,
-  "className": "foliumtooltip",
+        var popup_f062dbe53f4eacddfb9c6400c7a51562 = L.popup({
+  "maxWidth": 2650,
 });
-                     
-    
-            geo_json_ef6347e34fb7886438107e73659b4f2c.addTo(map_c44510619cc1dd5ccf92812597162f4c);
+
+        
+            
+                var html_40d6f493a1df9495214cd5991268450b = $(`<div id="html_40d6f493a1df9495214cd5991268450b" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/asapcoffeeshop/" target="_blank">ASAP</a><br>6 Tariff Street, Manchester M1 2FF</div>`)[0];
+                popup_f062dbe53f4eacddfb9c6400c7a51562.setContent(html_40d6f493a1df9495214cd5991268450b);
+            
+        
+
+        marker_cdaddb867e151307572a001215709d09.bindPopup(popup_f062dbe53f4eacddfb9c6400c7a51562)
+        ;
+
         
     
-            tile_layer_2bafb2af690a798ab0dc37580fc5891b.addTo(map_c44510619cc1dd5ccf92812597162f4c);
+    
+                marker_cdaddb867e151307572a001215709d09.setIcon(icon_98258bfc64ebddc865179ac181162c10);
+            
+    
+            var marker_4dee0102a9b7cbbcafc04d29df431120 = L.marker(
+                [53.47187903, -2.238390264],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
         
     
-            geo_json_ef6347e34fb7886438107e73659b4f2c.addTo(map_c44510619cc1dd5ccf92812597162f4c);
+            var icon_5c071eec859a76b4ea451b081550e121 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
         
+    
+        var popup_ca2ccbc1d9f70dfa26a3ff9a1ce82e1f = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_5d9366765c5095f690e60ff783be287f = $(`<div id="html_5d9366765c5095f690e60ff783be287f" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/asapcoffeeshop/" target="_blank">ASAP</a><br>Unit 1, 103 Oxford Road, Manchester M1 7ED</div>`)[0];
+                popup_ca2ccbc1d9f70dfa26a3ff9a1ce82e1f.setContent(html_5d9366765c5095f690e60ff783be287f);
+            
+        
+
+        marker_4dee0102a9b7cbbcafc04d29df431120.bindPopup(popup_ca2ccbc1d9f70dfa26a3ff9a1ce82e1f)
+        ;
+
+        
+    
+    
+                marker_4dee0102a9b7cbbcafc04d29df431120.setIcon(icon_5c071eec859a76b4ea451b081550e121);
+            
+    
+            var marker_b5737280c03d29c624fdd30016de9711 = L.marker(
+                [53.47754054, -2.243326262],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_b4a41b0439b84e3ec3fa214d64296a97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f55415b2b788e7b8abfaf7335592868 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_e0ab325d05b88b95dfd53553dcdd5f5d = $(`<div id="html_e0ab325d05b88b95dfd53553dcdd5f5d" style="width: 100.0%; height: 100.0%;"><a href="http://www.atrium-coffee.co.uk/" target="_blank">Atrium</a><br>1 St Peter's Square, Manchester M2 3DE</div>`)[0];
+                popup_8f55415b2b788e7b8abfaf7335592868.setContent(html_e0ab325d05b88b95dfd53553dcdd5f5d);
+            
+        
+
+        marker_b5737280c03d29c624fdd30016de9711.bindPopup(popup_8f55415b2b788e7b8abfaf7335592868)
+        ;
+
+        
+    
+    
+                marker_b5737280c03d29c624fdd30016de9711.setIcon(icon_b4a41b0439b84e3ec3fa214d64296a97);
+            
+    
+            var marker_5643246310aa13aea413e6a725a2bfe7 = L.marker(
+                [53.48046997, -2.244878188],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_5812672398226cf783ef46013955514d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_842f368fb9be3f41458a7948a20c5afa = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_59a5bf49b256f64d6bad99667b072268 = $(`<div id="html_59a5bf49b256f64d6bad99667b072268" style="width: 100.0%; height: 100.0%;"><a href="https://www.boldstreetcoffee.co.uk/cross-street-manchester/" target="_blank">Bold Street</a><br>53 Cross Street, Manchester M2 4JN</div>`)[0];
+                popup_842f368fb9be3f41458a7948a20c5afa.setContent(html_59a5bf49b256f64d6bad99667b072268);
+            
+        
+
+        marker_5643246310aa13aea413e6a725a2bfe7.bindPopup(popup_842f368fb9be3f41458a7948a20c5afa)
+        ;
+
+        
+    
+    
+                marker_5643246310aa13aea413e6a725a2bfe7.setIcon(icon_5812672398226cf783ef46013955514d);
+            
+    
+            var marker_d41e2ceb0752f3f24d6098f0b4b51324 = L.marker(
+                [53.46757341, -2.235596789],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_16414011cf48cad7cb9c4cfdb3af6c27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6e7c060ea50c1a3e1a04da817278de8 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_bc6a37a88007a7945014463c94ce4cd6 = $(`<div id="html_bc6a37a88007a7945014463c94ce4cd6" style="width: 100.0%; height: 100.0%;"><a href="https://boldstreetcoffee.co.uk/pages/university-green-manchester" target="_blank">Bold Street</a><br>140 Oxford Road, Manchester M13 9GP</div>`)[0];
+                popup_e6e7c060ea50c1a3e1a04da817278de8.setContent(html_bc6a37a88007a7945014463c94ce4cd6);
+            
+        
+
+        marker_d41e2ceb0752f3f24d6098f0b4b51324.bindPopup(popup_e6e7c060ea50c1a3e1a04da817278de8)
+        ;
+
+        
+    
+    
+                marker_d41e2ceb0752f3f24d6098f0b4b51324.setIcon(icon_16414011cf48cad7cb9c4cfdb3af6c27);
+            
+    
+            var marker_73133d13dd6b7af6a186422e4006fb80 = L.marker(
+                [53.47948912, -2.250143324],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_fb007210b4f62304ec82fdd9ed04ed45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c833c4947fc2b7064ba30553b3d85b2c = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_1c52263b839c3925bc5e598c31b3aa55 = $(`<div id="html_1c52263b839c3925bc5e598c31b3aa55" style="width: 100.0%; height: 100.0%;"><a href="https://boldstreetcoffee.co.uk/pages/spinningfields-manchester" target="_blank">Bold Street</a><br>2 Hardman Street, Manchester M3 3HF</div>`)[0];
+                popup_c833c4947fc2b7064ba30553b3d85b2c.setContent(html_1c52263b839c3925bc5e598c31b3aa55);
+            
+        
+
+        marker_73133d13dd6b7af6a186422e4006fb80.bindPopup(popup_c833c4947fc2b7064ba30553b3d85b2c)
+        ;
+
+        
+    
+    
+                marker_73133d13dd6b7af6a186422e4006fb80.setIcon(icon_fb007210b4f62304ec82fdd9ed04ed45);
+            
+    
+            var marker_399258cee8af608ec4bb12a223fa1ffb = L.marker(
+                [53.48382254, -2.232804338],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_a52d9e1b4f62bd0cfd74b1baca848506 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7b586e5b18d82cd1e5ad9970afbadcd = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_1046f020310ec251cca449b6fe302612 = $(`<div id="html_1046f020310ec251cca449b6fe302612" style="width: 100.0%; height: 100.0%;"><a href="https://companiobakery.co.uk/" target="_blank">Companio Bakery</a><br>Unit 1, 60 Spear Street, Manchester M1 1AW</div>`)[0];
+                popup_f7b586e5b18d82cd1e5ad9970afbadcd.setContent(html_1046f020310ec251cca449b6fe302612);
+            
+        
+
+        marker_399258cee8af608ec4bb12a223fa1ffb.bindPopup(popup_f7b586e5b18d82cd1e5ad9970afbadcd)
+        ;
+
+        
+    
+    
+                marker_399258cee8af608ec4bb12a223fa1ffb.setIcon(icon_a52d9e1b4f62bd0cfd74b1baca848506);
+            
+    
+            var marker_003b912f0da9e0c179e4d1d3e84b6655 = L.marker(
+                [53.4797301, -2.24584638],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_f9117516fe17ffbbf5d8292b6251c205 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99bc96d77c5dd19810e8562059276997 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_0604ee57822aa1158de20cdcce3b6bd7 = $(`<div id="html_0604ee57822aa1158de20cdcce3b6bd7" style="width: 100.0%; height: 100.0%;"><a href="http://www.dittocoffee.co.uk/" target="_blank">Ditto Coffee Union</a><br>Union, Albert Square, Manchester M2 6LW</div>`)[0];
+                popup_99bc96d77c5dd19810e8562059276997.setContent(html_0604ee57822aa1158de20cdcce3b6bd7);
+            
+        
+
+        marker_003b912f0da9e0c179e4d1d3e84b6655.bindPopup(popup_99bc96d77c5dd19810e8562059276997)
+        ;
+
+        
+    
+    
+                marker_003b912f0da9e0c179e4d1d3e84b6655.setIcon(icon_f9117516fe17ffbbf5d8292b6251c205);
+            
+    
+            var marker_64ec41de16de9b640e56b235cbf6a202 = L.marker(
+                [53.47595626, -2.242128342],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_a54907a8d2f88d7753d50c5ee3ab84c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7bbb71dfd435c5526c667803b4c3606 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_28f1c646a78c084cf4d08d9f2d8a83cb = $(`<div id="html_28f1c646a78c084cf4d08d9f2d8a83cb" style="width: 100.0%; height: 100.0%;"><a href="http://www.dittocoffee.co.uk/" target="_blank">Ditto Coffee Union</a><br>61 Oxford Street, Manchester M1 6EQ</div>`)[0];
+                popup_e7bbb71dfd435c5526c667803b4c3606.setContent(html_28f1c646a78c084cf4d08d9f2d8a83cb);
+            
+        
+
+        marker_64ec41de16de9b640e56b235cbf6a202.bindPopup(popup_e7bbb71dfd435c5526c667803b4c3606)
+        ;
+
+        
+    
+    
+                marker_64ec41de16de9b640e56b235cbf6a202.setIcon(icon_a54907a8d2f88d7753d50c5ee3ab84c0);
+            
+    
+            var marker_54edb1b011452c594876c88b046f10c2 = L.marker(
+                [53.47801578, -2.246264219],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_788d21c9784167fa2d314931e69c51de = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec964d1fce5ac949ebc44314b4ef295e = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_c1519dabedc53fc719f9de4ee6b61c8a = $(`<div id="html_c1519dabedc53fc719f9de4ee6b61c8a" style="width: 100.0%; height: 100.0%;"><a href="https://www.ezraandgil.com/location/peter-street" target="_blank">Ezra and Gil</a><br>49 Peter Street, Manchester M2 3NG</div>`)[0];
+                popup_ec964d1fce5ac949ebc44314b4ef295e.setContent(html_c1519dabedc53fc719f9de4ee6b61c8a);
+            
+        
+
+        marker_54edb1b011452c594876c88b046f10c2.bindPopup(popup_ec964d1fce5ac949ebc44314b4ef295e)
+        ;
+
+        
+    
+    
+                marker_54edb1b011452c594876c88b046f10c2.setIcon(icon_788d21c9784167fa2d314931e69c51de);
+            
+    
+            var marker_b6a6918d5505af6af1eef86fecee1fef = L.marker(
+                [53.48203441, -2.232883443],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_cf2cae82f29f0ad48840b21a37ec4779 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cd8a96e5a59618431c6a2c34dbc6722 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_4059da774ae19845b61ad6a261090e14 = $(`<div id="html_4059da774ae19845b61ad6a261090e14" style="width: 100.0%; height: 100.0%;"><a href="https://www.ezraandgil.com/location/northern-quarter" target="_blank">Ezra and Gil</a><br>20 Hilton St, Manchester M1 1FR</div>`)[0];
+                popup_5cd8a96e5a59618431c6a2c34dbc6722.setContent(html_4059da774ae19845b61ad6a261090e14);
+            
+        
+
+        marker_b6a6918d5505af6af1eef86fecee1fef.bindPopup(popup_5cd8a96e5a59618431c6a2c34dbc6722)
+        ;
+
+        
+    
+    
+                marker_b6a6918d5505af6af1eef86fecee1fef.setIcon(icon_cf2cae82f29f0ad48840b21a37ec4779);
+            
+    
+            var marker_f0303131b96d2520ec599387c9fc9e78 = L.marker(
+                [53.48149357, -2.249651577],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_a730b29a224d1f7013df68789e97d47f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bade90874ea630b56f06c6817adfd7ef = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_b4f001e521cd7b68dfbc39d33ca22e6b = $(`<div id="html_b4f001e521cd7b68dfbc39d33ca22e6b" style="width: 100.0%; height: 100.0%;"><a href="https://www.factorycoffeemcr.com/" target="_blank">Factory Coffee</a><br>38 King Street W, Manchester M3 2WZ</div>`)[0];
+                popup_bade90874ea630b56f06c6817adfd7ef.setContent(html_b4f001e521cd7b68dfbc39d33ca22e6b);
+            
+        
+
+        marker_f0303131b96d2520ec599387c9fc9e78.bindPopup(popup_bade90874ea630b56f06c6817adfd7ef)
+        ;
+
+        
+    
+    
+                marker_f0303131b96d2520ec599387c9fc9e78.setIcon(icon_a730b29a224d1f7013df68789e97d47f);
+            
+    
+            var marker_35a281446f2409d78c475e0a46147f6a = L.marker(
+                [53.47870696, -2.249520421],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_11828c7d75187a94466af5449683a1b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43858304d0234f4b6e01febc8cc503e7 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_fd86375af74ca3b4ec8b97bcf14ba68d = $(`<div id="html_fd86375af74ca3b4ec8b97bcf14ba68d" style="width: 100.0%; height: 100.0%;"><a href="https://federalcafe.co.uk/pages/deansgate" target="_blank">Federal</a><br>194 Deansgate, Manchester M3 3ND</div>`)[0];
+                popup_43858304d0234f4b6e01febc8cc503e7.setContent(html_fd86375af74ca3b4ec8b97bcf14ba68d);
+            
+        
+
+        marker_35a281446f2409d78c475e0a46147f6a.bindPopup(popup_43858304d0234f4b6e01febc8cc503e7)
+        ;
+
+        
+    
+    
+                marker_35a281446f2409d78c475e0a46147f6a.setIcon(icon_11828c7d75187a94466af5449683a1b6);
+            
+    
+            var marker_380d95b95b8b5a5ade1e5a410e3212b5 = L.marker(
+                [53.4842825, -2.238492603],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_a9df512499e44c6c8729683ff23caa7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9473b6e7cb597ecd7f35f03947d31f07 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_ea65fe8ac4bc3b31eeabafeb5e1f9eaa = $(`<div id="html_ea65fe8ac4bc3b31eeabafeb5e1f9eaa" style="width: 100.0%; height: 100.0%;"><a href="https://federalcafe.co.uk/pages/northern-quarter" target="_blank">Federal</a><br>9 Nicholas Croft Street, NQ, Manchester, M4 1EY</div>`)[0];
+                popup_9473b6e7cb597ecd7f35f03947d31f07.setContent(html_ea65fe8ac4bc3b31eeabafeb5e1f9eaa);
+            
+        
+
+        marker_380d95b95b8b5a5ade1e5a410e3212b5.bindPopup(popup_9473b6e7cb597ecd7f35f03947d31f07)
+        ;
+
+        
+    
+    
+                marker_380d95b95b8b5a5ade1e5a410e3212b5.setIcon(icon_a9df512499e44c6c8729683ff23caa7c);
+            
+    
+            var marker_1112fe3c8980d400257a2706f6f027d0 = L.marker(
+                [53.47267678, -2.239127521],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_03ded2bf2aa70ad340ef68e95fc493b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4cfe6fca34aa5f313fc293a74a71cd58 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_70633c0aeb0e8387941865123b8d292e = $(`<div id="html_70633c0aeb0e8387941865123b8d292e" style="width: 100.0%; height: 100.0%;"><a href="https://federalcafe.co.uk/pages/oxford-road" target="_blank">Federal</a><br>R3 No2 Circle Square, Oxford Road, Manchester, M1 7FS</div>`)[0];
+                popup_4cfe6fca34aa5f313fc293a74a71cd58.setContent(html_70633c0aeb0e8387941865123b8d292e);
+            
+        
+
+        marker_1112fe3c8980d400257a2706f6f027d0.bindPopup(popup_4cfe6fca34aa5f313fc293a74a71cd58)
+        ;
+
+        
+    
+    
+                marker_1112fe3c8980d400257a2706f6f027d0.setIcon(icon_03ded2bf2aa70ad340ef68e95fc493b4);
+            
+    
+            var marker_6a9d821c39926649bf95bef1164e4f3f = L.marker(
+                [53.4817203, -2.2322933],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_411129a0ba156805e6df2af0f077b94f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_925f7f8ea372c051b0edbfbde9f56bca = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_27ddbdbfb7ad1cce27f04df4e83ee817 = $(`<div id="html_27ddbdbfb7ad1cce27f04df4e83ee817" style="width: 100.0%; height: 100.0%;"><a href="http://www.feelgoodclub.co/" target="_blank">Feel Good Club</a><br>26-28 Hilton Street, Manchester M1 2EH</div>`)[0];
+                popup_925f7f8ea372c051b0edbfbde9f56bca.setContent(html_27ddbdbfb7ad1cce27f04df4e83ee817);
+            
+        
+
+        marker_6a9d821c39926649bf95bef1164e4f3f.bindPopup(popup_925f7f8ea372c051b0edbfbde9f56bca)
+        ;
+
+        
+    
+    
+                marker_6a9d821c39926649bf95bef1164e4f3f.setIcon(icon_411129a0ba156805e6df2af0f077b94f);
+            
+    
+            var marker_7e8ed6e8f6270d09428126d4873a1377 = L.marker(
+                [53.48256427, -2.235519262],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_0f889ae5f24dcbce1f49a96e887ec7f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77789b84e033c7a8ba68c9f02caed511 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_e761a40758f7ce0ecc685c9c572c1aa8 = $(`<div id="html_e761a40758f7ce0ecc685c9c572c1aa8" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/figsparrow/" target="_blank">fig + sparrow.</a><br>20 Oldham Street, Manchester M1 1JA</div>`)[0];
+                popup_77789b84e033c7a8ba68c9f02caed511.setContent(html_e761a40758f7ce0ecc685c9c572c1aa8);
+            
+        
+
+        marker_7e8ed6e8f6270d09428126d4873a1377.bindPopup(popup_77789b84e033c7a8ba68c9f02caed511)
+        ;
+
+        
+    
+    
+                marker_7e8ed6e8f6270d09428126d4873a1377.setIcon(icon_0f889ae5f24dcbce1f49a96e887ec7f8);
+            
+    
+            var marker_b533af3afc0bd6b43c26c41413c4b481 = L.marker(
+                [53.47701987, -2.25014212],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_35ea025bac0d4d4be336fa033ae9008e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c32fa2bf8388847dc447a0d19b169f2 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_e7f61597e65b62469924180db7bc0d77 = $(`<div id="html_e7f61597e65b62469924180db7bc0d77" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/fort_coffee_" target="_blank">Fort</a><br>255 Deansgate, Manchester M3 4EN</div>`)[0];
+                popup_5c32fa2bf8388847dc447a0d19b169f2.setContent(html_e7f61597e65b62469924180db7bc0d77);
+            
+        
+
+        marker_b533af3afc0bd6b43c26c41413c4b481.bindPopup(popup_5c32fa2bf8388847dc447a0d19b169f2)
+        ;
+
+        
+    
+    
+                marker_b533af3afc0bd6b43c26c41413c4b481.setIcon(icon_35ea025bac0d4d4be336fa033ae9008e);
+            
+    
+            var marker_4832bed6276692dd450f16769a3aeb01 = L.marker(
+                [53.47974839, -2.243905326],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_a127d09b6abae0312e5dc12dc0a81cde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_764f1da92625f869ca7ed5e6b24b8dad = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_ce7643402f564c123ed0164a8b387f12 = $(`<div id="html_ce7643402f564c123ed0164a8b387f12" style="width: 100.0%; height: 100.0%;"><a href="https://www.hamptonandvouis.co.uk" target="_blank">Hampton & Vouis</a><br>31 Princess Street, Manchester M2 4EW</div>`)[0];
+                popup_764f1da92625f869ca7ed5e6b24b8dad.setContent(html_ce7643402f564c123ed0164a8b387f12);
+            
+        
+
+        marker_4832bed6276692dd450f16769a3aeb01.bindPopup(popup_764f1da92625f869ca7ed5e6b24b8dad)
+        ;
+
+        
+    
+    
+                marker_4832bed6276692dd450f16769a3aeb01.setIcon(icon_a127d09b6abae0312e5dc12dc0a81cde);
+            
+    
+            var marker_005c7efce9d842d88dce2b8da4004c72 = L.marker(
+                [53.48096417, -2.242357205],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_755f1b9036186ef883af1487fd99a93e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d4064716cc1c220298f552549fa6e5b = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_43f62951282064e1e7c4348fe0546a1b = $(`<div id="html_43f62951282064e1e7c4348fe0546a1b" style="width: 100.0%; height: 100.0%;"><a href="http://www.houseofbooksandfriends.com/" target="_blank">House of Books & Friends</a><br>Ground Floor, 81 King Street, Manchester M2 4AH</div>`)[0];
+                popup_8d4064716cc1c220298f552549fa6e5b.setContent(html_43f62951282064e1e7c4348fe0546a1b);
+            
+        
+
+        marker_005c7efce9d842d88dce2b8da4004c72.bindPopup(popup_8d4064716cc1c220298f552549fa6e5b)
+        ;
+
+        
+    
+    
+                marker_005c7efce9d842d88dce2b8da4004c72.setIcon(icon_755f1b9036186ef883af1487fd99a93e);
+            
+    
+            var marker_428f81070794a0509b3193d53d7fda7d = L.marker(
+                [53.48117592, -2.232980199],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_256dbdae85e6212c71af11427342a78d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e35a1a4ef657c3fc2678aac7d091fc6 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_35976976770e0a0b9ec8ba7b247fc1eb = $(`<div id="html_35976976770e0a0b9ec8ba7b247fc1eb" style="width: 100.0%; height: 100.0%;"><a href="http://www.idlehandscoffee.com/" target="_blank">Idle Hands</a><br>35 Dale Street, Manchester M1 2HF</div>`)[0];
+                popup_9e35a1a4ef657c3fc2678aac7d091fc6.setContent(html_35976976770e0a0b9ec8ba7b247fc1eb);
+            
+        
+
+        marker_428f81070794a0509b3193d53d7fda7d.bindPopup(popup_9e35a1a4ef657c3fc2678aac7d091fc6)
+        ;
+
+        
+    
+    
+                marker_428f81070794a0509b3193d53d7fda7d.setIcon(icon_256dbdae85e6212c71af11427342a78d);
+            
+    
+            var marker_ce9ca2c16eeefac9252fe56202a9ca6e = L.marker(
+                [53.48345934, -2.235084148],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_5d9fe692c14f53b3173ef50eabea5573 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99859f5c7f05ada69299d5837d4c1da6 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_41655ee1f9fd7358db494ca0cf5da9c4 = $(`<div id="html_41655ee1f9fd7358db494ca0cf5da9c4" style="width: 100.0%; height: 100.0%;"><a href="http://www.justbetweenfriendscoffee.com/" target="_blank">Just Between Friends</a><br>56 Tib Street, Manchester M4 1LG</div>`)[0];
+                popup_99859f5c7f05ada69299d5837d4c1da6.setContent(html_41655ee1f9fd7358db494ca0cf5da9c4);
+            
+        
+
+        marker_ce9ca2c16eeefac9252fe56202a9ca6e.bindPopup(popup_99859f5c7f05ada69299d5837d4c1da6)
+        ;
+
+        
+    
+    
+                marker_ce9ca2c16eeefac9252fe56202a9ca6e.setIcon(icon_5d9fe692c14f53b3173ef50eabea5573);
+            
+    
+            var marker_4f7616ebab8f4fdf352632d4f89c5de7 = L.marker(
+                [53.47534182, -2.242019171],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_4c152b263a4a1a0cbe6b35d80f6681b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da02c73240ceb31ba3996db9877b4da8 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_f909ecafa4a9247d44b1031942861f82 = $(`<div id="html_f909ecafa4a9247d44b1031942861f82" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/lacollinamcr" target="_blank">La Collina</a><br>The Tootal Building, Oxford Road, Manchester M1 6EU</div>`)[0];
+                popup_da02c73240ceb31ba3996db9877b4da8.setContent(html_f909ecafa4a9247d44b1031942861f82);
+            
+        
+
+        marker_4f7616ebab8f4fdf352632d4f89c5de7.bindPopup(popup_da02c73240ceb31ba3996db9877b4da8)
+        ;
+
+        
+    
+    
+                marker_4f7616ebab8f4fdf352632d4f89c5de7.setIcon(icon_4c152b263a4a1a0cbe6b35d80f6681b3);
+            
+    
+            var marker_5279cacc41d2598b5bd4168d8d42d12f = L.marker(
+                [53.47395589, -2.248905454],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_ee2cf17fec695d95809a4c1739bf8899 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43270e807fc1fce8b0a62db7936ad5ca = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_849bd55b6c3781fd8f79e4a5350a3051 = $(`<div id="html_849bd55b6c3781fd8f79e4a5350a3051" style="width: 100.0%; height: 100.0%;"><a href="http://mancoco.co.uk/" target="_blank">Mancoco Coffee Bar</a><br>85 Hewitt Street, Manchester M15 4GB</div>`)[0];
+                popup_43270e807fc1fce8b0a62db7936ad5ca.setContent(html_849bd55b6c3781fd8f79e4a5350a3051);
+            
+        
+
+        marker_5279cacc41d2598b5bd4168d8d42d12f.bindPopup(popup_43270e807fc1fce8b0a62db7936ad5ca)
+        ;
+
+        
+    
+    
+                marker_5279cacc41d2598b5bd4168d8d42d12f.setIcon(icon_ee2cf17fec695d95809a4c1739bf8899);
+            
+    
+            var marker_d45d89c93f9cc5a73fd39655d719c424 = L.marker(
+                [53.48227436, -2.234422912],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_17cffe469404f17ff6c0d1ee9408a0b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_753ae6fbec286077d1d425a800e5d7ac = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_332d44e62d8a1006506b79c5e02a1dc8 = $(`<div id="html_332d44e62d8a1006506b79c5e02a1dc8" style="width: 100.0%; height: 100.0%;"><a href="https://northernpour.co.uk" target="_blank">Northern Pour</a><br>Sevendale House, Lever Street, Manchester M1 1JA</div>`)[0];
+                popup_753ae6fbec286077d1d425a800e5d7ac.setContent(html_332d44e62d8a1006506b79c5e02a1dc8);
+            
+        
+
+        marker_d45d89c93f9cc5a73fd39655d719c424.bindPopup(popup_753ae6fbec286077d1d425a800e5d7ac)
+        ;
+
+        
+    
+    
+                marker_d45d89c93f9cc5a73fd39655d719c424.setIcon(icon_17cffe469404f17ff6c0d1ee9408a0b6);
+            
+    
+            var marker_417abe1611b3c331d660fca1ecb839aa = L.marker(
+                [53.48274372, -2.246285007],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_9d976b338a5681de6086d01ce0f2cb45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97907e0b7f6fa6760c6e4ad7b43fdeab = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_0ebe959f1b954ff74998e885cf9828e2 = $(`<div id="html_0ebe959f1b954ff74998e885cf9828e2" style="width: 100.0%; height: 100.0%;"><a href="https://potkettleblackltd.co.uk/" target="_blank">Pot Kettle Black</a><br>Barton Arcade, Manchester M3 2BW</div>`)[0];
+                popup_97907e0b7f6fa6760c6e4ad7b43fdeab.setContent(html_0ebe959f1b954ff74998e885cf9828e2);
+            
+        
+
+        marker_417abe1611b3c331d660fca1ecb839aa.bindPopup(popup_97907e0b7f6fa6760c6e4ad7b43fdeab)
+        ;
+
+        
+    
+    
+                marker_417abe1611b3c331d660fca1ecb839aa.setIcon(icon_9d976b338a5681de6086d01ce0f2cb45);
+            
+    
+            var marker_3fa7e4b3f917be705705af767080c7a7 = L.marker(
+                [53.4865152, -2.236052436],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_66ef23e8cfe90b893df95c670a199617 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f323091093367294dbba261dd55e7d1e = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_016e66781b0e989a41373c5584d617bc = $(`<div id="html_016e66781b0e989a41373c5584d617bc" style="width: 100.0%; height: 100.0%;"><a href="https://potkettleblackltd.co.uk/" target="_blank">Pot Kettle Black</a><br>Angel Gardens, 1 Rochdale Rd, Manchester M4 4GE</div>`)[0];
+                popup_f323091093367294dbba261dd55e7d1e.setContent(html_016e66781b0e989a41373c5584d617bc);
+            
+        
+
+        marker_3fa7e4b3f917be705705af767080c7a7.bindPopup(popup_f323091093367294dbba261dd55e7d1e)
+        ;
+
+        
+    
+    
+                marker_3fa7e4b3f917be705705af767080c7a7.setIcon(icon_66ef23e8cfe90b893df95c670a199617);
+            
+    
+            var marker_8de76996603f23faa7f30db5fb6a7015 = L.marker(
+                [53.48349741, -2.224253],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_af38f5353896e1c8c693fcd391d5ff3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_017c82955a4e3dbfb4b382a6e7298ccd = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_abd306e94f70a28fb9f37583013e5157 = $(`<div id="html_abd306e94f70a28fb9f37583013e5157" style="width: 100.0%; height: 100.0%;"><a href="http://pollenbakery.com/" target="_blank">Pollen Bakery</a><br>Cotton Field Wharf, 8 New Union St, Manchester M4 6FQ</div>`)[0];
+                popup_017c82955a4e3dbfb4b382a6e7298ccd.setContent(html_abd306e94f70a28fb9f37583013e5157);
+            
+        
+
+        marker_8de76996603f23faa7f30db5fb6a7015.bindPopup(popup_017c82955a4e3dbfb4b382a6e7298ccd)
+        ;
+
+        
+    
+    
+                marker_8de76996603f23faa7f30db5fb6a7015.setIcon(icon_af38f5353896e1c8c693fcd391d5ff3d);
+            
+    
+            var marker_7aeadb9f75cda802d13ab706b86b145f = L.marker(
+                [53.47748569, -2.234181103],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_9fb7b4399e7f963079a286b4f8159579 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97f1dcc751a3cdb35460a999dd238582 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_71da327b4051b3a39a0ced5591075834 = $(`<div id="html_71da327b4051b3a39a0ced5591075834" style="width: 100.0%; height: 100.0%;"><a href="http://pollenbakery.com/" target="_blank">Pollen Bakery</a><br>42 Aytoun Street, Manchester M1 3GL</div>`)[0];
+                popup_97f1dcc751a3cdb35460a999dd238582.setContent(html_71da327b4051b3a39a0ced5591075834);
+            
+        
+
+        marker_7aeadb9f75cda802d13ab706b86b145f.bindPopup(popup_97f1dcc751a3cdb35460a999dd238582)
+        ;
+
+        
+    
+    
+                marker_7aeadb9f75cda802d13ab706b86b145f.setIcon(icon_9fb7b4399e7f963079a286b4f8159579);
+            
+    
+            var marker_9aa1133523ccfa659db776788c402869 = L.marker(
+                [53.48659449, -2.240012174],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_2ef61c3a1d8c6d503ad4166be0c42c23 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_78385e95f298c1fa0147edb8c29a6911 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_3a18e8c562ff878f3b45cad05bc8b50a = $(`<div id="html_3a18e8c562ff878f3b45cad05bc8b50a" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/pulpcoffee" target="_blank">Pulp Coffee</a><br>Hanover Street, Manchester M4 4AH</div>`)[0];
+                popup_78385e95f298c1fa0147edb8c29a6911.setContent(html_3a18e8c562ff878f3b45cad05bc8b50a);
+            
+        
+
+        marker_9aa1133523ccfa659db776788c402869.bindPopup(popup_78385e95f298c1fa0147edb8c29a6911)
+        ;
+
+        
+    
+    
+                marker_9aa1133523ccfa659db776788c402869.setIcon(icon_2ef61c3a1d8c6d503ad4166be0c42c23);
+            
+    
+            var marker_bd6bc92a1135ef568d4cd656ca3ec9a7 = L.marker(
+                [53.48434829, -2.234055318],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_df33028fd463d4ecc1cf68eeb0a58334 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43581368c8c0167dec44148ef323477b = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_ef078c9c6ee200f90eadc85aa3055840 = $(`<div id="html_ef078c9c6ee200f90eadc85aa3055840" style="width: 100.0%; height: 100.0%;"><a href="http://siopshop.co/" target="_blank">Siop Shop</a><br>53 Tib Street, Manchester M4 1LS</div>`)[0];
+                popup_43581368c8c0167dec44148ef323477b.setContent(html_ef078c9c6ee200f90eadc85aa3055840);
+            
+        
+
+        marker_bd6bc92a1135ef568d4cd656ca3ec9a7.bindPopup(popup_43581368c8c0167dec44148ef323477b)
+        ;
+
+        
+    
+    
+                marker_bd6bc92a1135ef568d4cd656ca3ec9a7.setIcon(icon_df33028fd463d4ecc1cf68eeb0a58334);
+            
+    
+            var marker_5befd758c723e77410aa137bbbe924b2 = L.marker(
+                [53.4836969, -2.230353257],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_2cd6f53414faeb84edfef710a9e0baf9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5933847d2afd3b808ecc7f3aa4fe9f9 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_a9003101a09c355a2d7f30e6263b0807 = $(`<div id="html_a9003101a09c355a2d7f30e6263b0807" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/sippcoffeemcr" target="_blank">Sipp Coffee</a><br>57a Great Ancoats Street, Ancoats, Manchester M4 5AB</div>`)[0];
+                popup_f5933847d2afd3b808ecc7f3aa4fe9f9.setContent(html_a9003101a09c355a2d7f30e6263b0807);
+            
+        
+
+        marker_5befd758c723e77410aa137bbbe924b2.bindPopup(popup_f5933847d2afd3b808ecc7f3aa4fe9f9)
+        ;
+
+        
+    
+    
+                marker_5befd758c723e77410aa137bbbe924b2.setIcon(icon_2cd6f53414faeb84edfef710a9e0baf9);
+            
+    
+            var marker_3be5e92791933ad3bda14ae80271c04d = L.marker(
+                [53.48118807, -2.256974862],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_f8d82c3d46c1867b1bd59dd071f892c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_040fbfc4a8d1e17b82ce47f91384d9e8 = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_38cc986f0cb23fdaf44e3092963c9a2b = $(`<div id="html_38cc986f0cb23fdaf44e3092963c9a2b" style="width: 100.0%; height: 100.0%;"><a href="https://www.instagram.com/spice_and_grind" target="_blank">Spice and Grind</a><br>Irwell Street, Salford M3 5EL</div>`)[0];
+                popup_040fbfc4a8d1e17b82ce47f91384d9e8.setContent(html_38cc986f0cb23fdaf44e3092963c9a2b);
+            
+        
+
+        marker_3be5e92791933ad3bda14ae80271c04d.bindPopup(popup_040fbfc4a8d1e17b82ce47f91384d9e8)
+        ;
+
+        
+    
+    
+                marker_3be5e92791933ad3bda14ae80271c04d.setIcon(icon_f8d82c3d46c1867b1bd59dd071f892c0);
+            
+    
+            var marker_44711d58c66348792f42757b2b0afa3e = L.marker(
+                [53.48513657, -2.225799184],
+                {
+}
+            ).addTo(map_4a592fe70bf0ffd57da8fed837d7efa1);
+        
+    
+            var icon_4e7c6e715eebd23e73a7f6b2f557bce0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "mug-saucer",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd5a967abbce5bdc7d744c066733782e = L.popup({
+  "maxWidth": 2650,
+});
+
+        
+            
+                var html_07b6f0ae05df503c324963aa87911886 = $(`<div id="html_07b6f0ae05df503c324963aa87911886" style="width: 100.0%; height: 100.0%;"><a href="http://www.theflatbaker.co.uk/" target="_blank">The Flat Baker</a><br>23 Radium Street, Ancoats, Manchester M4 6AY</div>`)[0];
+                popup_cd5a967abbce5bdc7d744c066733782e.setContent(html_07b6f0ae05df503c324963aa87911886);
+            
+        
+
+        marker_44711d58c66348792f42757b2b0afa3e.bindPopup(popup_cd5a967abbce5bdc7d744c066733782e)
+        ;
+
+        
+    
+    
+                marker_44711d58c66348792f42757b2b0afa3e.setIcon(icon_4e7c6e715eebd23e73a7f6b2f557bce0);
+            
 </script>
 </html>
